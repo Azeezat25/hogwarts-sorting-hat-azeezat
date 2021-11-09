@@ -5,47 +5,35 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("Shake Me")
 })
 input.onGesture(Gesture.Shake, function () {
-    number = randint(0, 5)
+    number = randint(0, 3)
     if (number == 0) {
+        basic.showString("You belong in Hufflepuff!")
         for (let index = 0; index < 3; index++) {
-            basic.showString("You belong in Hufflepuff!")
-            music.playMelody("B C5 B C5 B C5 B C5 ", 120)
             basic.showIcon(IconNames.Target)
+            music.playMelody("A G F G A G F G ", 120)
         }
     } else if (number == 1) {
+        basic.showString("You belong in Ravenclaw!")
         for (let index = 0; index < 3; index++) {
-            basic.showString("You belong in Ravenclaw!")
-            music.playMelody("G A G A G A G A ", 120)
             basic.showIcon(IconNames.Pitchfork)
+            music.playMelody("E F G F E F G F ", 120)
         }
     } else if (number == 2) {
+        basic.showString("You belong in Slytherin!")
         for (let index = 0; index < 3; index++) {
-            basic.showString("You belong in Slytherin!")
-            music.playMelody("E F E F E F E F ", 120)
             basic.showIcon(IconNames.Triangle)
+            music.playMelody("G F E F G F E F ", 120)
         }
     } else if (number == 3) {
+        basic.showString("You belong in Gryffindor!")
         for (let index = 0; index < 3; index++) {
-            basic.showString("You belong in Gryffindor!")
-            music.playMelody("C D C D C D C D ", 120)
-            basic.showIcon(IconNames.LeftTriangle)
-        }
-    } else if (number == 4) {
-        for (let index = 0; index < 3; index++) {
-            basic.showString("Special class-NONE!")
-            music.playMelody("E D C C C C C C ", 120)
-            basic.showIcon(IconNames.Skull)
-        }
-    } else {
-        for (let index = 0; index < 3; index++) {
-            basic.showString("Special class-ALL!")
-            music.playMelody("A B C5 C5 C5 C5 C5 C5 ", 120)
-            basic.showIcon(IconNames.Ghost)
+            basic.showIcon(IconNames.SmallDiamond)
+            music.playMelody("C5 B A B C5 B A B ", 120)
         }
     }
 })
 let number = 0
-basic.showString("Hello!")
+basic.showString("Welcome")
 basic.showString("Shake Me")
 basic.forever(function () {
 	
